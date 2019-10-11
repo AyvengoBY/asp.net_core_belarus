@@ -1,0 +1,39 @@
+﻿@model IEnumerable<asp.net_core_belarus.Data.Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h2>Products :</h2>
+<a asp-action="Index">Back</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Supplie</th>
+        <th>Category</th>
+        <th>Quantity per unit</th>
+        <th>Unit price</th>
+        <th>Units in stock</th>
+        <th>Units on order</th>
+        <th>Reordering level</th>
+        <th>Discontinued</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>@product.ProductID</td>
+            <td>@product.ProductName</td>
+            <td>@product.Supplier.CompanyName</td>
+            <td>@product.Category.CategoryName</td>
+            <td>@product.QuantityPerUnit</td>
+            <td>@product.UnitPrice</td>
+            <td>@product.UnitsInStock</td>
+            <td>@product.UnitsOnOrder</td>
+            <td>@product.ReorderLevel</td>
+            <td>@product.Discontinued</td>
+        </tr>
+    }
+</table>
+<a asp-action="Index">Back</a>
+
+
