@@ -7,15 +7,18 @@ using Microsoft.AspNetCore.Mvc;
 using asp.net_core_belarus.Models;
 using asp.net_core_belarus.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace asp.net_core_belarus.Controllers
 {
     public class HomeController : Controller
     {
         private NorthwindDB dB;
-        public HomeController()
+        private IConfiguration configuration;
+        public HomeController(NorthwindDB northwinddb, IConfiguration config)
         {
-            dB = new NorthwindDB();
+            dB = northwinddb;
+            configuration = config;
         }
 
         public IActionResult Index()
@@ -29,7 +32,17 @@ namespace asp.net_core_belarus.Controllers
 
         public IActionResult Products()
         {
-            return View(dB.Products.Include(c=>c.Category).Include(s=>s.Supplier));
+            IEnumerable<Product> model;
+            var maxProd = configuration.GetValue<int>("MaximumProducts");
+            if (maxProd>0)
+            {
+                model = dB.Products.Include(c => c.Category).Include(s => s.Supplier).Take(maxProd);
+            }
+            else
+            {
+                model = dB.Products.Include(c => c.Category).Include(s => s.Supplier);
+            }
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
