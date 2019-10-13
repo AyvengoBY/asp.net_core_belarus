@@ -1,0 +1,79 @@
+﻿@model asp.net_core_belarus.Models.ProductEditViewModel
+
+@{
+    ViewData["Title"] = "ProductEdit";
+}
+
+
+
+<h2>ProductEdit</h2>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ProductEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="hidden-field">
+                <label asp-for="@Model.ProductID" class="control-label"></label>
+                <input asp-for="@Model.ProductID" class="form-control" />
+                <span asp-validation-for="@Model.ProductID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ProductName" class="control-label"></label>
+                <input asp-for="@Model.ProductName" class="form-control" />
+                <span asp-validation-for="@Model.ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Supplier"></label>
+                <select asp-for="@Model.Supplier" asp-items="@new SelectList(Model.suppliers)"></select>
+                <span asp-validation-for="@Model.Supplier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Category" class="control-label"></label>
+                <select asp-for="@Model.Category" asp-items="@new SelectList(Model.categories)"></select>
+                <span asp-validation-for="@Model.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.QuantityPerUnit" class="control-label"></label>
+                <input asp-for="@Model.QuantityPerUnit" class="form-control" />
+                <span asp-validation-for="@Model.QuantityPerUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.UnitPrice" class="control-label"></label>
+                <input asp-for="@Model.UnitPrice" class="form-control" />
+                <span asp-validation-for="@Model.UnitPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.UnitsInStock" class="control-label"></label>
+                <input asp-for="@Model.UnitsInStock" class="form-control" />
+                <span asp-validation-for="@Model.UnitsInStock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.UnitsOnOrder" class="control-label"></label>
+                <input asp-for="@Model.UnitsOnOrder" class="form-control" />
+                <span asp-validation-for="@Model.UnitsOnOrder" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ReorderLevel" class="control-label"></label>
+                <input asp-for="@Model.ReorderLevel" class="form-control" />
+                <span asp-validation-for="@Model.ReorderLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="@Model.Discontinued" /> @Html.DisplayNameFor(model => model.Discontinued)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Products">Back to List</a>
+</div>
+

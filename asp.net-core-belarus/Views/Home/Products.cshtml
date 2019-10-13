@@ -5,6 +5,7 @@
 
 <h2>Products :</h2>
 <a asp-action="Index">Back</a>
+<a asp-action="ProductEdit" asp-route-id="0">Insert</a>
 <table border="1">
     <tr>
         <th>ID</th>
@@ -20,18 +21,20 @@
     </tr>
     @foreach (var product in Model)
     {
-        <tr>
-            <td>@product.ProductID</td>
-            <td>@product.ProductName</td>
-            <td>@product.Supplier.CompanyName</td>
-            <td>@product.Category.CategoryName</td>
-            <td>@product.QuantityPerUnit</td>
-            <td>@product.UnitPrice</td>
-            <td>@product.UnitsInStock</td>
-            <td>@product.UnitsOnOrder</td>
-            <td>@product.ReorderLevel</td>
-            <td>@product.Discontinued</td>
-        </tr>
+<tr>
+    <td>@product.ProductID</td>
+    <td>@product.ProductName</td>
+    <td>@product.Supplier.CompanyName</td>
+    <td>@product.Category.CategoryName</td>
+    <td>@product.QuantityPerUnit</td>
+    <td>@product.UnitPrice</td>
+    <td>@product.UnitsInStock</td>
+    <td>@product.UnitsOnOrder</td>
+    <td>@product.ReorderLevel</td>
+    <td>@product.Discontinued</td>
+    <td><a asp-action="ProductEdit" asp-route-id="@product.ProductID"> Edit </a></td>
+    <td><a asp-action="ProductDelete" method="post" asp-route-id="@product.ProductID"> Delete </a></td>
+</tr>
     }
 </table>
 <a asp-action="Index">Back</a>
