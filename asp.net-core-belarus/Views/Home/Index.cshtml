@@ -1,12 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
 <h2 align="center"> Welcome to Northwind Database !</h2>
-<ul>
-    <li>
-        <a asp-action="Categories" align=""> Categories</a>
-    </li>
-    <li>
-        <a asp-action="Products"> Products</a>
-    </li>
-</ul>
+
+<div class="container">
+
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+                <a class="btn btn-default" asp-action="Categories"> Categories</a>
+                <a class="btn btn-default" asp-action="Products"> Products</a>
+            </div>
+        </div>
+        <nav class="navbar navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+    </div>
+</div>
