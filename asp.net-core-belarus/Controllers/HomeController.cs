@@ -8,6 +8,8 @@ using asp.net_core_belarus.Models;
 using asp.net_core_belarus.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace asp.net_core_belarus.Controllers
 {
@@ -15,10 +17,12 @@ namespace asp.net_core_belarus.Controllers
     {
         private NorthwindDB dB;
         private IConfiguration configuration;
-        public HomeController(NorthwindDB northwinddb, IConfiguration config)
+        private ILogger logger;
+        public HomeController(NorthwindDB northwinddb, IConfiguration config, ILogger<HomeController> log)
         {
             dB = northwinddb;
             configuration = config;
+            logger = log;
         }
 
         public IActionResult Index()
@@ -30,10 +34,21 @@ namespace asp.net_core_belarus.Controllers
             return View(dB.Categories);
         }
 
+        public void ThrowException()
+        {
+            throw new Exception("TEST EXCEPTION!");
+        }
+
         public IActionResult Products()
         {
             IEnumerable<Product> model;
             var maxProd = configuration.GetValue<int>("MaximumProducts");
+
+            if (maxProd > 0)
+                    logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : Maximum products on Products page is {0}" + Environment.NewLine, maxProd);
+                else
+                    logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : All products will view on Products page" + Environment.NewLine, null);
+            
             if (maxProd > 0)
             {
                 model = dB.Products.Include(c => c.Category).Include(s => s.Supplier).Take(maxProd);
@@ -117,7 +132,13 @@ namespace asp.net_core_belarus.Controllers
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var error = this.HttpContext.Features.Get<IExceptionHandlerFeature>().Error;
+            var exceptionHandlerPathFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+            var requestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+
+            logger.LogError(error, Environment.NewLine + "ERROR :  Exception thrown on:{0}   Message:{1}  RequestID:{2}" + Environment.NewLine , exceptionHandlerPathFeature?.Path, error.Message, requestId);
+
+            return View(new ErrorViewModel { RequestId = requestId });
         }
     }
 }
