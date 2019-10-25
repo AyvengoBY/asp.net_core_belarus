@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using asp.net_core_belarus.Data;
 using asp.net_core_belarus.Loggin;
+using asp.net_core_belarus.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -37,7 +38,7 @@ namespace asp.net_core_belarus
                 options.UseSqlServer(connectionString);
                 Logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : DB connection string: {0}" + Environment.NewLine, connectionString);
             });
-
+            services.AddScoped<INorthwindService, NorthwindServiceDB>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
