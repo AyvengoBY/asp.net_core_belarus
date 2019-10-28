@@ -43,14 +43,11 @@ namespace asp.net_core_belarus.Controllers
         public IActionResult Products()
         {
             IEnumerable<Product> model;
-            var maxProd = Convert.ToInt32(configuration["MaximumProducts"]);
+            var maximumProducts = Convert.ToInt32(configuration["MaximumProducts"]);
 
-            if (maxProd > 0)
-                    logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : Maximum products on Products page is {0}" + Environment.NewLine, maxProd);
-                else
-                    logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : All products will view on Products page" + Environment.NewLine, null);
+            logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : MaximumProducts : Value {0}" + Environment.NewLine, maximumProducts);
 
-            model = service.GetProducts(maxProd);
+            model = service.GetProducts(maximumProducts);
 
             return View(model);
         }
@@ -117,7 +114,7 @@ namespace asp.net_core_belarus.Controllers
             }
         }
         [HttpGet]
-        public IActionResult ProductDelete(int id)
+        public IActionResult DeleteProduct(int id)
         {
             service.DeleteProduct(id);
             return RedirectToAction("Products");

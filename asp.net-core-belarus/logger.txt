@@ -270,3 +270,1024 @@ Executing action method asp.net_core_belarus.Controllers.HomeController.ThrowExc
 Executed action asp.net_core_belarus.Controllers.HomeController.ThrowException (asp.net-core-belarus) in 2553.9413ms
 An unhandled exception has occurred while executing the request.
 Request finished in 2639.2103ms 404 text/plain
+INFO :   Application start on D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 43.9338ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : DB connection string: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (47ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.489ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 81.094ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) in 1169.9434ms
+Request finished in 1343.6156ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : DB connection string: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : All products will view on Products page
+
+Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 227.7522ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 16.0477ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 297.6957ms
+Request finished in 308.1468ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : DB connection string: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 58.4536ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 100.7775ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 195.0376ms
+Request finished in 219.3153ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : DB connection string: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : All products will view on Products page
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 18.8182ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 6.6102ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 46.1207ms
+Request finished in 55.141ms 200 text/html; charset=utf-8
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 53.4997ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (48ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9452ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 85.3588ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) in 1751.8764ms
+Request finished in 1990.807ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Categories  
+Route matched with {action = "Categories", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Categories() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Categories (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Categories (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9998ms.
+Executing ViewResult, running view Categories.
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Categories executed in 126.8288ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Categories (asp.net-core-belarus) in 159.8801ms
+Request finished in 169.2756ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0241ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.8151ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) in 21.1242ms
+Request finished in 52.58ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 143.0091ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 15.4891ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 178.1201ms
+Request finished in 186.9683ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 51.3689ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 91.3831ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 173.2043ms
+Request finished in 199.7606ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 16.917ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 6.1573ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 40.4283ms
+Request finished in 49.2666ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/1  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 10.4086ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 14.863ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 42.9334ms
+Request finished in 51.0318ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 16.0085ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 5.6277ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 38.3917ms
+Request finished in 46.4813ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0182ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 2.4681ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) in 20.5149ms
+Request finished in 29.5102ms 200 text/html; charset=utf-8
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 39.3079ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (49ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.0524ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 111.5701ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) in 1372.9354ms
+Request finished in 1549.8236ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 233.1473ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 17.2737ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 297.2474ms
+Request finished in 307.4305ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 17.5271ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 1605.6885ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 1641.1348ms
+Request finished in 1649.4457ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 21.4075ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 64.9218ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 114.1116ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 218.2395ms
+Request finished in 245.1241ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0278ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.3809ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) in 23.6176ms
+Request finished in 32.9076ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 17.7032ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 17.0296ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 53.7983ms
+Request finished in 62.7987ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 14.863ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 193.0745ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 230.7867ms
+Request finished in 238.8083ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 14.8104ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 12.5772ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 143.8744ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 175.2154ms
+Request finished in 183.1152ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 6.9233ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 14.2318ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 143.2194ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 176.3486ms
+Request finished in 184.8381ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.501ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 18.804ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 16.4474ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 55.9814ms
+Request finished in 64.8331ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 16.4505ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 13.0892ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 45.6823ms
+Request finished in 52.2282ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 8.3194ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 15.8754ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 136.0878ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 172.6303ms
+Request finished in 181.7724ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 8.4565ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 18.8492ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 16.2972ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 56.4806ms
+Request finished in 65.7754ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/ProductEdit/0  
+Route matched with {action = "ProductEdit", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult ProductEdit(Int32) on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) - Validation state: Valid
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+WHERE [p].[ProductID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed action method asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 17.6275ms.
+Executing ViewResult, running view ProductEdit.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[SupplierID], [s].[Address], [s].[City], [s].[CompanyName], [s].[ContactName], [s].[ContactTitle], [s].[Country], [s].[Fax], [s].[HomePage], [s].[Phone], [s].[PostalCode], [s].[Region]
+FROM [Suppliers] AS [s]
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view ProductEdit executed in 14.0737ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp.net-core-belarus) in 50.5795ms
+Request finished in 58.0968ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 6.5109ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 16.7719ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 137.8525ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 174.5961ms
+Request finished in 182.2662ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 8.6428ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 12.2993ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 133.699ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 165.9803ms
+Request finished in 174.9363ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.0362ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 12.8964ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 128.6185ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 159.0507ms
+Request finished in 167.6372ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.672ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 14.6005ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 130.5622ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 163.6288ms
+Request finished in 172.1365ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 6.3277ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 14.9213ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 130.0248ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 164.0521ms
+Request finished in 172.5188ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.5366ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 18.1703ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 164.1146ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 204.6758ms
+Request finished in 213.1924ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.8623ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 12.8039ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 5.9952ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 36.6423ms
+Request finished in 46.1032ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.3184ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 15.0166ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 132.4503ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 165.9322ms
+Request finished in 174.5981ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 6.3672ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+Executed action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 15.9194ms.
+Executing ViewResult, running view Products.
+Executed ViewResult - view Products executed in 154.2202ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 188.9847ms
+Request finished in 197.272ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.3656ms 200 image/x-icon
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Request finished in 35.5006ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind1;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.8925ms.
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 75.4826ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp.net-core-belarus) in 1172.1695ms
+Request finished in 1335.8189ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Products  
+Route matched with {action = "Products", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Products() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind1;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) - Validation state: Valid
+
+INFO :  READ CONFIGURATION : MaximumProducts : Value 0
+
+Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[ProductID], [c].[CategoryID], [c].[Discontinued], [c].[ProductName], [c].[QuantityPerUnit], [c].[ReorderLevel], [c].[SupplierID], [c].[UnitPrice], [c].[UnitsInStock], [c].[UnitsOnOrder], [c.Supplier].[SupplierID], [c.Supplier].[Address], [c.Supplier].[City], [c.Supplier].[CompanyName], [c.Supplier].[ContactName], [c.Supplier].[ContactTitle], [c.Supplier].[Country], [c.Supplier].[Fax], [c.Supplier].[HomePage], [c.Supplier].[Phone], [c.Supplier].[PostalCode], [c.Supplier].[Region], [c.Category].[CategoryID], [c.Category].[CategoryName], [c.Category].[Description], [c.Category].[Picture]
+FROM [Products] AS [c]
+LEFT JOIN [Suppliers] AS [c.Supplier] ON [c].[SupplierID] = [c.Supplier].[SupplierID]
+LEFT JOIN [Categories] AS [c.Category] ON [c].[CategoryID] = [c.Category].[CategoryID]
+An exception occurred in the database while iterating the results of a query for context type 'asp.net_core_belarus.Data.NorthwindDB'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Products'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:e62068ef-1824-4cd5-854f-f486c4a7548e
+Error Number:208,State:1,Class:16
+Executed action asp.net_core_belarus.Controllers.HomeController.Products (asp.net-core-belarus) in 7757.3539ms
+An unhandled exception has occurred while executing the request.
+Request finished in 7828.7835ms 500 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/Home/Categories  
+Route matched with {action = "Categories", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Categories() on controller asp.net_core_belarus.Controllers.HomeController (asp.net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind1;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp.net_core_belarus.Controllers.HomeController.Categories (asp.net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Categories (asp.net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 2.0087ms.
+Executing ViewResult, running view Categories.
+Failed executing DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+An exception occurred in the database while iterating the results of a query for context type 'asp.net_core_belarus.Data.NorthwindDB'.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Categories'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:e62068ef-1824-4cd5-854f-f486c4a7548e
+Error Number:208,State:1,Class:16
+Executed action asp.net_core_belarus.Controllers.HomeController.Categories (asp.net-core-belarus) in 107.4348ms
+An unhandled exception has occurred while executing the request.
+Request finished in 146.5866ms 500 text/html; charset=utf-8

@@ -116,7 +116,7 @@ namespace UnitTests
 
             var controller = new HomeController(mockService.Object, mockConfiguration.Object, mockLogger.Object);
 
-            var result = controller.ProductDelete(55) as RedirectToActionResult;
+            var result = controller.DeleteProduct(55) as RedirectToActionResult;
 
             Assert.AreEqual("Products", result.ActionName);
         }

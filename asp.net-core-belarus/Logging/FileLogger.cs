@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace asp.net_core_belarus.Loggin
+namespace asp.net_core_belarus.Logging
 {
     public class FileLogger : ILogger
     {

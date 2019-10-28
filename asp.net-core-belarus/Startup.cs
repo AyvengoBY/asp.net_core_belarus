@@ -36,7 +36,7 @@ namespace asp.net_core_belarus
             {
                 var connectionString = Configuration.GetConnectionString("Northwind");
                 options.UseSqlServer(connectionString);
-                Logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : DB connection string: {0}" + Environment.NewLine, connectionString);
+                Logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: {0}" + Environment.NewLine, connectionString);
             });
             services.AddScoped<INorthwindService, NorthwindServiceDB>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -47,9 +47,7 @@ namespace asp.net_core_belarus
         {
             loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
             Logger = loggerFactory.CreateLogger("FileLogger");
-            Logger.LogInformation("INFO :   Application start on {0}" + Environment.NewLine, Path.Combine(Directory.GetCurrentDirectory()));
-
-            env.EnvironmentName = EnvironmentName.Production;
+            Logger.LogInformation("INFO :   APPLICATION START ON {0}" + Environment.NewLine, Path.Combine(Directory.GetCurrentDirectory()));
 
             if (env.IsDevelopment())
             {
