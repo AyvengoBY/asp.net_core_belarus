@@ -108,8 +108,6 @@ namespace asp.net_core_belarus.Controllers
             }
             else
             {
-                model.suppliers = service.Suppliers.Select(s => s.CompanyName);
-                model.categories = service.Categories.Select(c => c.CategoryName);
                 return View(model);
             }
         }
