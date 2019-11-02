@@ -1,0 +1,66 @@
+﻿@model UploadCategoryImageViewModel
+@{
+    ViewData["Title"] = "Upload image";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>UploadImage</title>
+</head>
+<body>
+    <h2 class="col-lg-12">Upload image : @Model.CategoryName</h2>
+    <div class="row col-lg-12">
+        <form asp-action="UploadImage">
+            <div class="hidden-field">
+                <input asp-for="@Model.CategoryId" class="form-control" />
+                <input asp-for="@Model.CategoryName" class="form-control" />
+                <input asp-for="@Model.ImageDataUrl" class="form-control" />
+            </div>
+
+            <div class="col-md-12">
+                <div class="label">Current image :</div>
+                <div>
+                    <img src="@Model.ImageDataUrl" />
+                </div>
+            </div>
+            <br />
+                <div class="label">New image file name :</div>
+                <div class="row">
+                    <input id="uploadFileInput" asp-for="@Model.UploadFileName" class="form-control col-lg-8" />
+                    <span asp-validation-for="@Model.UploadFileName" class="text-danger"></span>
+                    <button class="btn col-lg-4 right" type="button" id="previwButton" onclick="previwFile()">Preview</button>
+                    <br />
+                </div>
+            <br />
+            <div class="col-md-12">
+                <div class="label">New image :</div>
+                <div>
+                    <img id="newImage" src="" />
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-lg-8">
+                    <a asp-action="Index">Back to List</a>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    function previwFile() {
+        var fileName = "/images/" + $('#uploadFileInput').val();
+        $('#newImage').attr('src', fileName);
+    };
+
+</script>
