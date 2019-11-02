@@ -1,0 +1,19 @@
+﻿@model IEnumerable<asp.net_core_belarus.Data.Category>
+@{
+    ViewData["Title"] = "New Categories";
+}
+<h2>Categories :</h2>
+
+
+<table class="table ">
+    @foreach (var category in Model)
+    {
+    <tr>
+        <td>@category.CategoryName</td>
+        <td>@category.Description</td>
+        <td><a asp-action="GetImage" asp-route-id="@category.CategoryID"> Get image </a></td>
+        <td><a asp-action="UploadImage" asp-route-id="@category.CategoryID"> Upload image </a></td>
+    </tr>
+    }
+</table>
+<a asp-controller="Home" asp-action="Index">Back</a>

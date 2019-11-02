@@ -5,16 +5,16 @@
 <h2>Categories :</h2>
 
 <ul>
-    @foreach(var category in Model)
+    @foreach (var category in Model)
     {
-        <li >
-            <div>@category.CategoryName</div> 
-            <div> 
+        <li>
+            <div>@category.CategoryName</div>
+            <div>
                 <font color="blue">@category.Description</font>
             </div>
         </li>
     }
 </ul>
 
-<a asp-action="Index">Back</a>
+<a asp-controller="Home" asp-action="Index">Back</a>
 
