@@ -68,6 +68,11 @@ namespace asp.net_core_belarus
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "images",
+                    template: "images/{image_id}",
+                    defaults: new { controller = "Images", action = "GetImage" });
+
             });
         }
     }
