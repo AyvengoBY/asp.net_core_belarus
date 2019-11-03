@@ -31,7 +31,6 @@ namespace asp.net_core_belarus.Controllers
         {
             Stream resultStream = service.GetCategoryImageJpg(id);
             return  new FileStreamResult(resultStream, "image/jpeg");
-            
         }
         [HttpGet]
         public IActionResult UploadImage(int id)
