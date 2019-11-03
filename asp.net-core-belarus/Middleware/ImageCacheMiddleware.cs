@@ -46,13 +46,13 @@ namespace asp.net_core_belarus.Middleware
 
                 if (httpContext.Response.ContentType != null && httpContext.Response.ContentType.Contains("image/jpeg"))
                 {
+                    if (!Directory.Exists(_filepath))
+                    {
+                        Directory.CreateDirectory(_filepath);
+                    }
                     if (Directory.GetFiles(_filepath).Count() < Convert.ToInt32(_config.GetSection("ImageCache")["MaxFiles"]))
                     {
                         int size = (int)httpContext.Response.ContentLength;
-                        if (!Directory.Exists(_filepath))
-                        {
-                            Directory.CreateDirectory(_filepath);
-                        }
                         FileStream file = new FileStream(_filepath + filename, FileMode.Create);
                         byte[] buff = new byte[size];
                         httpContext.Response.Body.Position = 0;
@@ -67,11 +67,15 @@ namespace asp.net_core_belarus.Middleware
         private void processCacheExpiration()
         {
             DateTime deadline = DateTime.Now - new TimeSpan(0, Convert.ToInt32(_config.GetSection("ImageCache")["ExparationMinutes"]), 0);
-            var files = Directory.GetFiles(_filepath);
-            foreach(var file in files)
+
+            if (Directory.Exists(_filepath))
             {
-                if (Directory.GetLastAccessTime(file) < deadline)
-                    File.Delete(file);
+                var files = Directory.GetFiles(_filepath);
+                foreach (var file in files)
+                {
+                    if (Directory.GetLastAccessTime(file) < deadline)
+                        File.Delete(file);
+                }
             }
         }
     }
