@@ -5,10 +5,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using asp.net_core_belarus.Data;
 using asp.net_core_belarus.Loggin;
+using asp.net_core_belarus.Middleware;
 using asp.net_core_belarus.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -58,10 +60,11 @@ namespace asp.net_core_belarus
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseStatusCodePages();
+            app.UseMiddleware<ResponseRewindMiddleware>();
+            app.UseMiddleware<ImageCacheMiddleware>();
 
             app.UseMvc(routes =>
             {
