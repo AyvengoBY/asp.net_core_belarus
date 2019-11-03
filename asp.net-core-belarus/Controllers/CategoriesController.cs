@@ -7,9 +7,11 @@ using Microsoft.Extensions.Logging;
 using System.Net.Http.Headers;
 using asp.net_core_belarus.Models;
 using asp.net_core_belarus.Data;
+using asp.net_core_belarus.Filters;
 
 namespace asp.net_core_belarus.Controllers
 {
+    [ServiceFilter(typeof(LogginActionFilter))]
     public class CategoriesController : Controller
     {
         private INorthwindService service;
