@@ -19,6 +19,14 @@ namespace asp.net_core_belarus
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureLogging((context, logging) =>
+                {
+                    var env = context.HostingEnvironment;
+                    var config = context.Configuration.GetSection("Logging");
+                    // ...
+                    logging.AddConfiguration(config);
+                })
                 .UseStartup<Startup>();
+                
     }
 }

@@ -11,9 +11,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Diagnostics;
 using asp.net_core_belarus.Services;
+using asp.net_core_belarus.Filters;
 
 namespace asp.net_core_belarus.Controllers
 {
+    [ServiceFilter(typeof(LogginActionFilter))]
     public class HomeController : Controller
     {
         private INorthwindService service;
@@ -25,7 +27,6 @@ namespace asp.net_core_belarus.Controllers
             configuration = config;
             logger = log;
         }
-
         public IActionResult Index()
         {
             return View();
