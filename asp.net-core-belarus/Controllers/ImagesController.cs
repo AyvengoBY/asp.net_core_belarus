@@ -21,6 +21,14 @@ namespace asp.net_core_belarus.Controllers
             configuration = config;
             logger = log;
         }
+
+        public IActionResult Index()
+        {
+            var files = Directory.GetFiles((Directory.GetCurrentDirectory() + "\\wwwroot\\images\\"),"*.jpg").Select(f=>Path.GetFileName(f));
+            
+            return View(files);
+        }
+
         public IActionResult GetImage(string image_id)
         {
             string fileName = Path.Combine(Directory.GetCurrentDirectory() + "\\wwwroot\\images\\", $"{ image_id}.jpg");

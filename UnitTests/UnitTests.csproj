@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\asp.net-core-belarus\asp.net-core-belarus.csproj" />
+    <ProjectReference Include="..\asp.net-core-belarus\asp-net-core-belarus.csproj" />
   </ItemGroup>
 
 </Project>
