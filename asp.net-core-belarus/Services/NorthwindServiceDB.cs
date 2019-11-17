@@ -74,11 +74,20 @@ namespace asp.net_core_belarus.Services
         public Stream GetCategoryImageJpg(int id)
         {
             Stream dbStream = new MemoryStream();
-            dbStream.Write(db.Categories.FirstOrDefault(c => c.CategoryID == id).Picture, 78, db.Categories.FirstOrDefault(c => c.CategoryID == id).Picture.Length-78);
-            var image = Image.FromStream(dbStream);
             Stream resultStream = new MemoryStream();
+            Image image;
+            if (db.Categories.FirstOrDefault(c => c.CategoryID == id).Picture != null)
+            {
+                dbStream.Write(db.Categories.FirstOrDefault(c => c.CategoryID == id).Picture, 78, db.Categories.FirstOrDefault(c => c.CategoryID == id).Picture.Length - 78);
+                image = Image.FromStream(dbStream);
+            }
+            else
+            {
+                image = Image.FromFile(Directory.GetCurrentDirectory() + "\\wwwroot\\images\\NoPicture.jpg");
+            }
             image.Save(resultStream, System.Drawing.Imaging.ImageFormat.Jpeg);
             resultStream.Position = 0;
+
             return resultStream;
         }
 
@@ -91,7 +100,7 @@ namespace asp.net_core_belarus.Services
             image.Save(dbStream, System.Drawing.Imaging.ImageFormat.Bmp);
             byte[] buf = new byte[dbStream.Length + 78];
             dbStream.Position = 0;
-            dbStream.Read(buf, 78,(int)dbStream.Length);
+            dbStream.Read(buf, 78, (int)dbStream.Length);
             category.Picture = buf;
             db.Categories.Update(category);
             db.SaveChanges();

@@ -29,7 +29,7 @@ namespace asp.net_core_belarus.Controllers
                 FileStream resultStream = new FileStream(fileName, FileMode.Open);
                 return new FileStreamResult(resultStream, "image/jpeg");
             }
-            return Content("FILE NOT FOUND !");
+            return NotFound();
         }
     }
 }

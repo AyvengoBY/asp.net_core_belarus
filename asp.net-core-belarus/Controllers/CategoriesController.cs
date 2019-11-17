@@ -48,7 +48,7 @@ namespace asp.net_core_belarus.Controllers
         [HttpPost]
         public IActionResult UploadImage(UploadCategoryImageViewModel model)
         {
-            string fullPath = Path.Combine(Directory.GetCurrentDirectory()+"\\wwwroot\\images\\", model.UploadFileName);
+            string fullPath = Path.Combine(Directory.GetCurrentDirectory()+"\\wwwroot\\images\\", model.UploadFileName??"NoPicture.jpg");
             
             if (!System.IO.File.Exists(fullPath))
             {

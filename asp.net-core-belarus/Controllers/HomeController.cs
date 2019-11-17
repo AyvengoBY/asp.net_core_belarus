@@ -63,8 +63,8 @@ namespace asp.net_core_belarus.Controllers
             {
                 product = new Product
                 {
-                    CategoryID = service.Products.First().CategoryID,
-                    SupplierID = service.Products.First().SupplierID,
+                    CategoryID = service.Categories.FirstOrDefault().CategoryID,
+                    SupplierID = service.Suppliers.FirstOrDefault().SupplierID,
                 };
             }
             model.Category = service.Categories.FirstOrDefault<Category>(c => c.CategoryID == product.CategoryID).CategoryName;
