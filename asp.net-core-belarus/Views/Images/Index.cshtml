@@ -1,0 +1,25 @@
+﻿@using  asp.net_core_belarus.Helpers
+@model IEnumerable<string>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2 align="center">Images :</h2>
+
+<div class="container">
+
+    <table class="table-bordered table-striped" width="100%">
+        <tr>
+            <th width="50%">Using TagHelper</th>
+        </tr>
+        @foreach (var file in Model)
+        {
+            <tr>
+                <td>
+                    <a northwind-id="@file">@file</a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

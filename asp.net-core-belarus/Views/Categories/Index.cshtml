@@ -1,4 +1,5 @@
-﻿@model IEnumerable<asp.net_core_belarus.Data.Category>
+﻿@using  asp.net_core_belarus.Helpers
+@model IEnumerable<asp.net_core_belarus.Data.Category>
 @{
     ViewData["Title"] = "New Categories";
 }
@@ -11,12 +12,14 @@
     <tr>
         <td>@category.CategoryName</td>
         <td>@category.Description</td>
-        <td><a asp-action="GetImage" asp-route-id="@category.CategoryID"> Get image </a></td>
+        <td>@Html.NorthwindImageLink(x=>category.CategoryID, category.CategoryID,  "Get image")</td>
+
+
         <td><a asp-action="UploadImage" asp-route-id="@category.CategoryID"> Upload image </a></td>
     </tr>
     }
 </table>
 <a asp-controller="Home" asp-action="Index">Back</a>
-@section Footer{ 
-    <p class="panel-footer text-info text-center" > NOTE : Your can’t edit categories.</p>
+@section Footer{
+    <p class="panel-footer text-info text-center"> NOTE : Your can’t edit categories.</p>
 }
