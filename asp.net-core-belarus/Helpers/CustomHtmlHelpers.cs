@@ -16,7 +16,7 @@ namespace asp.net_core_belarus.Helpers
         public static HtmlString NorthwindImageLink<TModel, TResult>(this IHtmlHelper<TModel> htmlHelper,
             Expression<Func<TModel, TResult>> expression, int imgId, string linkText)
         {
-            return new HtmlString(String.Format("<a href='Categories/GetImage/{0}'>{1}</a>", imgId, linkText));
+            return new HtmlString(String.Format("<a href='Category/GetImage/{0}'>{1}</a>", imgId, linkText));
         }
     }
 }

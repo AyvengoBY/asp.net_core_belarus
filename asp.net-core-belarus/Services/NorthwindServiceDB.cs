@@ -105,6 +105,16 @@ namespace asp.net_core_belarus.Services
             db.Categories.Update(category);
             db.SaveChanges();
         }
+        public void CategoryUploadImage(int id, Stream dbStream)
+        {
+            Category category = Category(id);
+            byte[] buf = new byte[dbStream.Length + 78];
+            dbStream.Position = 0;
+            dbStream.Read(buf, 78, (int)dbStream.Length);
+            category.Picture = buf;
+            db.Categories.Update(category);
+            db.SaveChanges();
+        }
 
         public Category Category(int id)
         {

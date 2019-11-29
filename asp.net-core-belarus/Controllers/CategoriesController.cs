@@ -1,62 +1,52 @@
-﻿using asp.net_core_belarus.Services;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Drawing;
+using System.Linq;
+using System.Threading.Tasks;
+using asp.net_core_belarus.Data;
+using asp.net_core_belarus.Services;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using System.Net.Http.Headers;
-using asp.net_core_belarus.Models;
-using asp.net_core_belarus.Data;
-using asp.net_core_belarus.Filters;
 
-namespace asp.net_core_belarus.Controllers
+namespace asp_net_core_belarus.Controllers
 {
-    [ServiceFilter(typeof(LogginActionFilter))]
-    public class CategoriesController : Controller
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CategoriesController : ControllerBase
     {
         private INorthwindService service;
         private IConfiguration configuration;
         private ILogger logger;
-        public  CategoriesController(INorthwindService service, IConfiguration config, ILogger<HomeController> log)
+
+        public CategoriesController(INorthwindService service, IConfiguration config, ILogger<CategoriesController> log)
         {
             this.service = service;
             configuration = config;
             logger = log;
         }
-
-        public IActionResult Index()
-        {
-            return View(service.Categories);
-        }
-        
-        public IActionResult GetImage(int id)
-        {
-            Stream resultStream = service.GetCategoryImageJpg(id);
-            return  new FileStreamResult(resultStream, "image/jpeg");
-        }
+        // GET: api/Categories
         [HttpGet]
-        public IActionResult UploadImage(int id)
+        public IEnumerable<Category> Get()
         {
-            UploadCategoryImageViewModel model = new UploadCategoryImageViewModel();
-            model.CategoryId = id;
-            model.CategoryName = service.Category(id).CategoryName;
-            model.ImageDataUrl = service.GetCategoryImageAsDataUrl(id);
-            model.UploadFileName = string.Empty;
-            return View(model);
+            return service.Categories;
+        }
+        // GET: api/Categories
+        [HttpGet("{id}")]
+        public Stream GetImage(int id)
+        {
+            return service.GetCategoryImageJpg(id);
+        }
+        // PUT: api/Categories/5
+        [HttpPut("{id}")]
+        public void UpdateImage(int id, [FromBody] Stream image)
+        {
+            if (image != null)
+            {
+                service.CategoryUploadImage(id, image);
+            }
         }
 
-        [HttpPost]
-        public IActionResult UploadImage(UploadCategoryImageViewModel model)
-        {
-            string fullPath = Path.Combine(Directory.GetCurrentDirectory()+"\\wwwroot\\images\\", model.UploadFileName??"NoPicture.jpg");
-            
-            if (!System.IO.File.Exists(fullPath))
-            {
-                ModelState.AddModelError("UploadFileName", "File not found.");
-                return View(model);
-            }
-            service.CategoryUploadJpegImage(model.CategoryId, fullPath);
-            return new RedirectToActionResult("Index", "Categories",null);
-        }
     }
 }

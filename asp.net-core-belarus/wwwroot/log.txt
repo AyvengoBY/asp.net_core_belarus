@@ -6162,3 +6162,704 @@ FROM [Categories] AS [c]
 Executed ViewResult - view ProductEdit executed in 100.7386ms.
 Executed action asp.net_core_belarus.Controllers.HomeController.ProductEdit (asp-net-core-belarus) in 201.7229ms
 Request finished in 224.2154ms 200 text/html; charset=utf-8
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 189.7117ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (174ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.656ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 170.6169ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 5277.115ms
+Request finished in 6064.312ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Request finished in 80.444ms 200 image/svg+xml
+Request finished in 90.0972ms 200 image/svg+xml
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 248.2726ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 55.9161ms 200 application/javascript
+Request finished in 71.7448ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/favicon.ico  
+Sending file. Request path: '/favicon.ico'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\favicon.ico'
+Request finished in 7.2547ms 200 image/x-icon
+Request starting HTTP/1.1 GET http://localhost:44365/Categories  
+Request finished in 5.2087ms 404 text/plain
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.1678ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.4417ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 36.7175ms
+Request finished in 45.814ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Request finished in 16.3208ms 200 image/svg+xml
+Request finished in 20.1036ms 200 image/svg+xml
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 29.3097ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 32.0782ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (55ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.9444ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 262.8097ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 1933.5528ms
+Request finished in 2131.4202ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Request finished in 38.266ms 200 image/svg+xml
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Request finished in 75.7251ms 200 image/svg+xml
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 101.0409ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 44.4552ms 200 application/javascript
+Request finished in 65.9976ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.212ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 212.7995ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 243.3833ms
+Request finished in 254.4661ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 16.0987ms 200 application/javascript
+Request finished in 16.6872ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 30.3192ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0384ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.3086ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 28.1145ms
+Request finished in 37.2815ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Request finished in 17.051ms 200 image/svg+xml
+Request finished in 23.028ms 200 image/svg+xml
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 34.2425ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 21.0059ms 200 application/javascript
+Request finished in 22.8525ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0918ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 10.9718ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 34.1103ms
+Request finished in 42.7725ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 16.3467ms 200 application/javascript
+Request finished in 20.4805ms 200 application/javascript
+An unhandled exception has occurred while executing the request.
+The response has already started, the error page middleware will not be executed.
+Connection id "0HLRKRU3AGF90", Request id "0HLRKRU3AGF90:00000007": An unhandled exception was thrown by the application.
+Request finished in 12715.8167ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category/UploadImage/2  
+Route matched with {action = "UploadImage", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadImage(Int32) on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.UploadImage : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.UploadImage (asp-net-core-belarus) - Validation state: Valid
+Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed action method asp.net_core_belarus.Controllers.CategoryController.UploadImage (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 168.9538ms.
+
+INFO :  ACTION  : Category.UploadImage : End
+Executing ViewResult, running view UploadImage.
+Executed ViewResult - view UploadImage executed in 48.2753ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.UploadImage (asp-net-core-belarus) in 257.5213ms
+Request finished in 284.2574ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 10.5156ms 200 application/javascript
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 23.6091ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 37.4841ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0292ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 10.7659ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 31.8714ms
+Request finished in 40.2099ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 22.2213ms 200 application/javascript
+Request finished in 35.0677ms 200 application/javascript
+An unhandled exception has occurred while executing the request.
+The response has already started, the error page middleware will not be executed.
+Connection id "0HLRKRU3AGF91", Request id "0HLRKRU3AGF91:00000002": An unhandled exception was thrown by the application.
+Request finished in 2416.5827ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Categories/GetImage/3  
+Request finished in 4.4822ms 404 text/plain
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0318ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 9.2106ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 33.5419ms
+Request finished in 42.2104ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request finished in 13.9059ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 25.4302ms 200 application/javascript
+Request finished in 22.1738ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Categories/GetImage/7  
+Request finished in 3.7592ms 404 text/plain
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0298ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 8.1146ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 31.0826ms
+Request finished in 38.5024ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 18.2306ms 200 application/javascript
+Request finished in 21.5173ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 34.0542ms 200 application/javascript
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 26.3449ms 200 
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9361ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 85.3183ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 1195.854ms
+Request finished in 1363.643ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Request finished in 23.5275ms 200 image/svg+xml
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Request finished in 54.2159ms 200 image/svg+xml
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 52.1415ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 31.001ms 200 application/javascript
+Request finished in 40.4653ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 1.136ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 176.3545ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 218.3072ms
+Request finished in 231.2045ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 27.3032ms 200 application/javascript
+Request finished in 30.7962ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 44.4629ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category/GetImage/2  
+Route matched with {action = "GetImage", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetImage(Int32) on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.GetImage : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.GetImage (asp-net-core-belarus) - Validation state: Valid
+Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed action method asp.net_core_belarus.Controllers.CategoryController.GetImage (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.FileStreamResult in 118.142ms.
+
+INFO :  ACTION  : Category.GetImage : End
+Executing Microsoft.AspNetCore.Mvc.FileStreamResult, sending file with download name '' ...
+Executed action asp.net_core_belarus.Controllers.CategoryController.GetImage (asp-net-core-belarus) in 158.2516ms
+Request finished in 179.1033ms 200 image/jpeg
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.1024ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 9.0518ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 33.5294ms
+Request finished in 41.7863ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 11.4926ms 200 application/javascript
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 25.4831ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 34.1595ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category/UploadImage/3  
+Route matched with {action = "UploadImage", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult UploadImage(Int32) on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.UploadImage : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.UploadImage (asp-net-core-belarus) - Validation state: Valid
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+WHERE [c].[CategoryID] = @__id_0
+Executed action method asp.net_core_belarus.Controllers.CategoryController.UploadImage (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 24.6525ms.
+
+INFO :  ACTION  : Category.UploadImage : End
+Executing ViewResult, running view UploadImage.
+Executed ViewResult - view UploadImage executed in 47.5065ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.UploadImage (asp-net-core-belarus) in 98.0002ms
+Request finished in 113.8557ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 15.608ms 200 application/javascript
+Request finished in 21.1259ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 35.5214ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0236ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 6.7632ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 30.7373ms
+Request finished in 40.2591ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 27.1459ms 200 application/javascript
+Request finished in 9128.6019ms 200 application/javascript
+Connection processing ended abnormally.
+Request starting HTTP/1.1 GET http://localhost:44365/Category  
+Route matched with {action = "Index", controller = "Category"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.CategoryController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Category.Index : Start
+Executing action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0284ms.
+
+INFO :  ACTION  : Category.Index : End
+Executing ViewResult, running view Index.
+Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[CategoryID], [c].[CategoryName], [c].[Description], [c].[Picture]
+FROM [Categories] AS [c]
+Executed ViewResult - view Index executed in 9.0604ms.
+Executed action asp.net_core_belarus.Controllers.CategoryController.Index (asp-net-core-belarus) in 32.9395ms
+Request finished in 42.0369ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request finished in 38.594ms 200 application/javascript
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 68.7664ms 200 application/javascript
+Request finished in 66.18ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.0531ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 3.2304ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 27.5308ms
+Request finished in 35.7674ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Request finished in 16.4181ms 200 image/svg+xml
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Request finished in 2061.5484ms 200 image/svg+xml
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Connection processing ended abnormally.
+Connection processing ended abnormally.
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 38.6139ms 200 application/javascript
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 30.303ms 200 
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1,079ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9105ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 155.6887ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 2977.8941ms
+Request finished in 3206.6336ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Request finished in 98.5256ms 200 image/svg+xml
+Request finished in 91.9777ms 200 image/svg+xml
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 241.4121ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Request finished in 81.3972ms 200 application/javascript
+Request finished in 140.5426ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/api/products  
+Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[asp.net_core_belarus.Data.Product] Get() on controller asp_net_core_belarus.Controllers.ProductsController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp_net_core_belarus.Controllers.ProductsController.Get (asp-net-core-belarus) - Validation state: Valid
+INFO :   APPLICATION START ON D:\repos\asp.net-core-belarus\asp.net-core-belarus
+
+Request starting HTTP/1.1 DEBUG http://localhost:54857/  0
+Request finished in 24.384ms 200 
+Request starting HTTP/1.1 GET http://localhost:44365/  
+Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller asp.net_core_belarus.Controllers.HomeController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (42ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+
+INFO :  ACTION  : Home.Index : Start
+Executing action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ViewResult in 0.9048ms.
+
+INFO :  ACTION  : Home.Index : End
+Executing ViewResult, running view Index.
+Executed ViewResult - view Index executed in 84.158ms.
+Executed action asp.net_core_belarus.Controllers.HomeController.Index (asp-net-core-belarus) in 1121.61ms
+Request finished in 1296.6603ms 200 text/html; charset=utf-8
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery/dist/jquery.js  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner1.svg  
+Request starting HTTP/1.1 GET http://localhost:44365/images/banner2.svg  
+Sending file. Request path: '/images/banner1.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner1.svg'
+Sending file. Request path: '/images/banner2.svg'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\images\banner2.svg'
+Request finished in 33.5007ms 200 image/svg+xml
+Request finished in 27.7546ms 200 image/svg+xml
+Sending file. Request path: '/lib/jquery/dist/jquery.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery\dist\jquery.js'
+Request finished in 52.067ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation/dist/jquery.validate.js  
+Request starting HTTP/1.1 GET http://localhost:44365/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js  
+Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation\dist\jquery.validate.js'
+Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'D:\repos\asp.net-core-belarus\asp.net-core-belarus\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+Request finished in 12.0556ms 200 application/javascript
+Request finished in 15.8159ms 200 application/javascript
+Request starting HTTP/1.1 GET http://localhost:44365/api/products  
+Route matched with {action = "Get", controller = "Products"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[asp.net_core_belarus.Data.Product] Get() on controller asp_net_core_belarus.Controllers.ProductsController (asp-net-core-belarus).
+
+INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: Server=(localdb)\MSSQLLocalDB;Database=Northwind;Trusted_Connection=True;App=EntityFramework
+
+Entity Framework Core 2.1.11-servicing-32099 initialized 'NorthwindDB' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0
+Executing action method asp_net_core_belarus.Controllers.ProductsController.Get (asp-net-core-belarus) - Validation state: Valid
+Executed action method asp_net_core_belarus.Controllers.ProductsController.Get (asp-net-core-belarus), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.7523ms.
+Executing ObjectResult, writing value of type 'Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[asp.net_core_belarus.Data.Product, asp-net-core-belarus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[ProductID], [p].[CategoryID], [p].[Discontinued], [p].[ProductName], [p].[QuantityPerUnit], [p].[ReorderLevel], [p].[SupplierID], [p].[UnitPrice], [p].[UnitsInStock], [p].[UnitsOnOrder]
+FROM [Products] AS [p]
+Executed action asp_net_core_belarus.Controllers.ProductsController.Get (asp-net-core-belarus) in 268.5151ms
+Request finished in 282.7743ms 200 application/json; charset=utf-8
