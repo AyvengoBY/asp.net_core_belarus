@@ -1,0 +1,86 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-2">Web client example</h1>
+    <br />
+    <div class="container">
+        <div class="row align-content-center">
+            <div class="col-6">
+                <a class="btn btn-outline-info" onclick="products();"> List of products</a>
+            </div>
+            <div class="col-6">
+                <a class="btn btn-outline-info" onclick="categories();"> List of categories</a>
+            </div>
+            <div id="list"></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script>
+        function products() {
+            var uri = '@Model.Host' + 'products';
+            try {
+                $.getJSON(uri)
+                    .done(function (data) {
+                        if (data !== null) {
+                            $('#list').empty();
+                            $('#list').prepend('<ul id="data" Align="left"/>');
+                            $.each(data, function (key, item) {
+                                $('<li>', { text: formatProduct(item) }).appendTo($('#data'));
+                            });
+                        }
+                        else {
+                            show_error();
+                        }
+                    })
+            }
+            catch (error) {
+                show_error();
+            }
+        }
+
+        function show_error() {
+            $('#list').empty();
+            $('#list').prepend('<ul id="data" Align="left"/>');
+            $('<li>', { text: 'No data or server error.' }).appendTo($('#data'));
+        }
+
+        function formatProduct(item) {
+            return item.productID + '   ' + item.productName;
+        }
+
+
+        function categories(){
+            var uri = '@Model.Host' + 'categories';
+            try {
+                $.getJSON(uri)
+                    .done(function (data) {
+                        if (data !== null) {
+                            $('#list').empty();
+                            $('#list').prepend('<ul id="data" Align="left"/>');
+                            $.each(data, function (key, item) {
+                                $('<li>', { text: formatCategory(item) }).appendTo($('#data'));
+                            });
+                        }
+                        else {
+                            show_error();
+                        }
+                    })
+            }
+            catch (error) {
+                show_error();
+            }
+        }
+        function formatCategory(item) {
+            return item.categoryID + '   ' + item.categoryName;
+        }
+
+
+    </script>
+}

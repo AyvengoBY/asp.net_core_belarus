@@ -44,6 +44,7 @@ namespace asp.net_core_belarus
             services.AddScoped<INorthwindService, NorthwindServiceDB>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<LogginActionFilter>();
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,6 +66,7 @@ namespace asp.net_core_belarus
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCors(builder => builder.AllowAnyOrigin());
             app.UseStatusCodePages();
             app.UseMiddleware<ResponseRewindMiddleware>();
             app.UseMiddleware<ImageCacheMiddleware>();
