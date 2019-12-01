@@ -26,19 +26,30 @@ namespace asp_net_core_belarus.Controllers
             configuration = config;
             logger = log;
         }
-        // GET: api/Categories
+        /// <summary>
+        /// Get list of category records 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<Category> Get()
         {
             return service.Categories;
         }
-        // GET: api/Categories
+        /// <summary>
+        /// Get category image 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public Stream GetImage(int id)
         {
             return service.GetCategoryImageJpg(id);
         }
-        // PUT: api/Categories/5
+        /// <summary>
+        /// Udate category image
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="image"></param>
         [HttpPut("{id}")]
         public void UpdateImage(int id, [FromBody] Stream image)
         {

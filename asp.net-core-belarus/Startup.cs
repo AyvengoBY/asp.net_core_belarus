@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using asp.net_core_belarus.Data;
 using asp.net_core_belarus.Filters;
@@ -18,6 +19,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace asp.net_core_belarus
 {
@@ -45,8 +47,16 @@ namespace asp.net_core_belarus
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddSingleton<LogginActionFilter>();
             services.AddCors();
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ASP-NET-CORE-BELARUS API", Version = "v1" });
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+            });
         }
-
+    
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory )
         {
@@ -70,8 +80,18 @@ namespace asp.net_core_belarus
             app.UseStatusCodePages();
             app.UseMiddleware<ResponseRewindMiddleware>();
             app.UseMiddleware<ImageCacheMiddleware>();
+            app.UseSwagger(c =>
+            {
+                c.SerializeAsV2 = true;
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "ASP-NET-CORE-BELARUS API V1");
+            });
 
-            app.UseMvc(routes =>
+
+
+        app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",

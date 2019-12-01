@@ -25,14 +25,20 @@ namespace asp_net_core_belarus.Controllers
             configuration = config;
             logger = log;
         }
-        // GET: api/Products
+        /// <summary>
+        /// Get list of products
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IEnumerable<Product> Get()
         {
             return service.Products;
         }
 
-        // POST: api/Products
+        /// <summary>
+        /// Create a product record
+        /// </summary>
+        /// <param name="product"></param>
         [HttpPost]
         public void Create([FromBody] Product product)
         {
@@ -42,7 +48,11 @@ namespace asp_net_core_belarus.Controllers
             }
         }
 
-        // PUT: api/Products/5
+        /// <summary>
+        /// Update product
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="product"></param>
         [HttpPut("{id}")]
         public void Update(int id, [FromBody] Product product)
         {
@@ -51,7 +61,10 @@ namespace asp_net_core_belarus.Controllers
                 service.UpdateProduct(product);
             }
         }
-        // DELETE: api/Products/5
+        /// <summary>
+        /// Delete product record
+        /// </summary>
+        /// <param name="id"></param>
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

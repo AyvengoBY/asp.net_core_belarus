@@ -1,0 +1,25 @@
+# Swagger Codegen Ignore
+# Lines beginning with a # are comments
+
+# This should match build.sh located anywhere.
+build.sh
+
+# Matches build.sh in the root
+/build.sh
+
+# Exclude all recursively
+docs/**
+
+# Explicitly allow files excluded by other rules
+!docs/UserApi.md
+
+# Recursively exclude directories named Api
+# You can't negate files below this directory.
+src/**/Api/
+
+# When this file is nested under /Api (excluded above),
+# this rule is ignored because parent directory is excluded by previous rule.
+!src/**/PetApiTests.cs
+
+# Exclude a single, nested file explicitly
+src/IO.Swagger.Test/Model/AnimalFarmTests.cs

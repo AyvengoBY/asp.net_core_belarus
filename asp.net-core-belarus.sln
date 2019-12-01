@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\Unit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleClient\ConsoleClient.csproj", "{14393C86-AF3D-45B6-A784-5E50F1F53BF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{92250199-DCE7-4024-973C-B9AA69B32D40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "WebClient\WebClient.csproj", "{92250199-DCE7-4024-973C-B9AA69B32D40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedApiClientProxi", "GeneratedApiClientProxi\GeneratedApiClientProxi.csproj", "{F370330C-0CB8-4A7F-B652-798E6933230D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,9 @@ Global
 		{92250199-DCE7-4024-973C-B9AA69B32D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92250199-DCE7-4024-973C-B9AA69B32D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92250199-DCE7-4024-973C-B9AA69B32D40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F370330C-0CB8-4A7F-B652-798E6933230D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F370330C-0CB8-4A7F-B652-798E6933230D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F370330C-0CB8-4A7F-B652-798E6933230D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
