@@ -82,7 +82,7 @@ namespace asp.net_core_belarus
             app.UseMiddleware<ImageCacheMiddleware>();
             app.UseSwagger(c =>
             {
-                c.SerializeAsV2 = true;
+               // c.SerializeAsV2 = true;
             });
             app.UseSwaggerUI(c =>
             {

@@ -49,13 +49,14 @@ namespace asp_net_core_belarus.Controllers
         /// Udate category image
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="image"></param>
+        /// <param name="file"></param>
         [HttpPut("{id}")]
-        public void UpdateImage(int id, [FromBody] Stream image)
+        public void UpdateImage(IFormFile file, int id)
         {
-            if (image != null)
+
+            if (file != null && file.ContentType == "image/jpeg")
             {
-                service.CategoryUploadImage(id, image);
+                service.CategoryUploadJpegImage(id,file.OpenReadStream());
             }
         }
 

@@ -20,6 +20,7 @@ namespace asp.net_core_belarus.Services
         Stream GetCategoryImageJpg(int id);
         string GetCategoryImageAsDataUrl(int id);
         void CategoryUploadJpegImage(int id, string filename);
+        void CategoryUploadJpegImage(int id, Stream stream);
         void CategoryUploadImage(int id, Stream img);
     }
 }
