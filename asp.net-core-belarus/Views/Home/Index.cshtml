@@ -5,11 +5,16 @@
     Layout = "_HomePageLayout";
 }
 
-
-<h2 align="center"> Welcome to Northwind Database !</h2>
-
 <div class="container">
 
+    <div class="row">
+        <div class="col-lg-10">
+            <h2 align="center"> Welcome to Northwind Database !</h2>
+        </div>
+        <div class="col-lg-2">
+            <partial name="_LoginPartial" />
+        </div>
+    </div>
     <div class="pos-f-t">
         <div class="collapse" id="navbarToggleExternalContent">
             <div class="bg-light p-4">
@@ -24,4 +29,5 @@
             </button>
         </nav>
     </div>
+
 </div>

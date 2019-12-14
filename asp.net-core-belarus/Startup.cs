@@ -9,11 +9,14 @@ using asp.net_core_belarus.Filters;
 using asp.net_core_belarus.Loggin;
 using asp.net_core_belarus.Middleware;
 using asp.net_core_belarus.Services;
+using asp_net_core_belarus.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -41,7 +44,7 @@ namespace asp.net_core_belarus
             {
                 var connectionString = Configuration.GetConnectionString("Northwind");
                 options.UseSqlServer(connectionString);
-                Logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: {0}" + Environment.NewLine, connectionString);
+                // logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: {0}" + Environment.NewLine, connectionString);
             });
             services.AddScoped<INorthwindService, NorthwindServiceDB>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -55,8 +58,20 @@ namespace asp.net_core_belarus
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = true;
+                options.Password.RequiredLength = 5;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+            });
+            services.AddTransient<IEmailSender, EmailSender>();
+
         }
-    
+
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory )
         {
@@ -80,6 +95,9 @@ namespace asp.net_core_belarus
             app.UseStatusCodePages();
             app.UseMiddleware<ResponseRewindMiddleware>();
             app.UseMiddleware<ImageCacheMiddleware>();
+
+            app.UseAuthentication();
+
             app.UseSwagger(c =>
             {
                // c.SerializeAsV2 = true;
