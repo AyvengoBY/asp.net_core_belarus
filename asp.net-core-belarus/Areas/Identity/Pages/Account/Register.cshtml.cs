@@ -19,10 +19,12 @@ namespace asp_net_core_belarus.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
+            RoleManager<IdentityRole> roolManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -30,6 +32,7 @@ namespace asp_net_core_belarus.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roolManager;
         }
 
         [BindProperty]
@@ -54,6 +57,10 @@ namespace asp_net_core_belarus.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+            [Display(Name = "Administrator")]
+            public bool IsAdmin { get; set; }
+
         }
 
         public void OnGet(string returnUrl = null)
@@ -68,6 +75,14 @@ namespace asp_net_core_belarus.Areas.Identity.Pages.Account
             {
                 var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
+                if (!await _roleManager.RoleExistsAsync("Admin"))
+                    await _roleManager.CreateAsync(new IdentityRole("Admin"));
+
+                if (Input.IsAdmin)
+                    await _userManager.AddToRoleAsync(user, "Admin");
+
+
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");

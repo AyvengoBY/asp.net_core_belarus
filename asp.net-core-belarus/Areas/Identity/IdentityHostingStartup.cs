@@ -20,7 +20,9 @@ namespace asp_net_core_belarus.Areas.Identity
                         context.Configuration.GetConnectionString("UsersContextConnection")));
 
                 services.AddDefaultIdentity<IdentityUser>()
+                    .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<UsersContext>();
+                services.AddScoped<IUserClaimsPrincipalFactory<IdentityUser>, UserClaimsPrincipalFactory<IdentityUser, IdentityRole>>();
             });
         }
     }

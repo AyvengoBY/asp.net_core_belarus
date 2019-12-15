@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Home Page";
 }
 @{
@@ -21,6 +22,10 @@
                 <a class="btn btn-default" asp-controller="Category" asp-action="Index"> Categories</a>
                 <a class="btn btn-default" asp-action="Products"> Products</a>
                 <a class="btn btn-default" asp-controller="Images" asp-action="Index"> Images</a>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a class="btn btn-default" asp-controller="Admin" asp-action="Index"> Admin</a>
+                }
             </div>
         </div>
         <nav class="navbar navbar-light bg-light">

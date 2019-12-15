@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Diagnostics;
 using asp.net_core_belarus.Services;
 using asp.net_core_belarus.Filters;
+using Microsoft.AspNetCore.Identity;
 
 namespace asp.net_core_belarus.Controllers
 {
@@ -21,13 +22,16 @@ namespace asp.net_core_belarus.Controllers
         private INorthwindService service;
         private IConfiguration configuration;
         private ILogger logger;
-        public HomeController(INorthwindService service, IConfiguration config, ILogger<HomeController> log)
+        private readonly UserManager<IdentityUser> _userManager;
+
+        public HomeController(INorthwindService service, IConfiguration config, ILogger<HomeController> log, UserManager<IdentityUser> userManager)
         {
             this.service = service;
             configuration = config;
             logger = log;
+            _userManager = userManager;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             return View();
         }
