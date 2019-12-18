@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleClient", "ConsoleCli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebClient", "WebClient\WebClient.csproj", "{92250199-DCE7-4024-973C-B9AA69B32D40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratedApiClientProxi", "GeneratedApiClientProxi\GeneratedApiClientProxi.csproj", "{F370330C-0CB8-4A7F-B652-798E6933230D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratedApiClientProxi", "GeneratedApiClientProxi\GeneratedApiClientProxi.csproj", "{F370330C-0CB8-4A7F-B652-798E6933230D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

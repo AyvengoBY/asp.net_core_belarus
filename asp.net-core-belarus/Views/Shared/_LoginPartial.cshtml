@@ -1,15 +1,20 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
-
-@if (SignInManager.IsSignedIn(User))
+@if (User.Identity.IsAuthenticated)
 {
     <div class="nav navbar-nav navbar-right">
-        <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
-            <div class="row">
-                <button type="submit" class="btn btn-link navbar-btn navbar-link col-lg-6">Logout</button>
-            </div>
-        </form>
+        @if (User.Claims.Any(x => x.Value == "Microsoft"))
+        {
+            <a asp-area="AzureAD" asp-controller="Account" asp-action="SignOut">Sign out</a>
+        }
+        else
+        {
+            <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })" method="post" id="logoutForm" class="navbar-right">
+                <div class="row">
+                    <button type="submit" class="btn btn-link navbar-btn navbar-link col-lg-6">Logout</button>
+                </div>
+            </form>
+        }
     </div>
 }
 else
