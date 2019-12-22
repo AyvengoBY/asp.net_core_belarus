@@ -9,7 +9,6 @@ using asp.net_core_belarus.Filters;
 using asp.net_core_belarus.Loggin;
 using asp.net_core_belarus.Middleware;
 using asp.net_core_belarus.Services;
-using asp_net_core_belarus.Areas.Identity.Data;
 using asp_net_core_belarus.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.AzureAD.UI;
@@ -53,9 +52,16 @@ namespace asp.net_core_belarus
             {
                 var connectionString = Configuration.GetConnectionString("Northwind");
                 options.UseSqlServer(connectionString);
-                Logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: {0}" + Environment.NewLine, connectionString);
+                //Logger.LogInformation(Environment.NewLine + "INFO :  READ CONFIGURATION : ConnectionStrings/Northwind: {0}" + Environment.NewLine, connectionString);
             });
             services.AddScoped<INorthwindService, NorthwindServiceDB>();
+
+            services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
+                .AddEntityFrameworkStores<NorthwindDB>();
+            services.AddScoped<IUserClaimsPrincipalFactory<IdentityUser>, UserClaimsPrincipalFactory<IdentityUser, IdentityRole>>();
+
+
 
             services.Configure<CookiePolicyOptions>(options =>
             {

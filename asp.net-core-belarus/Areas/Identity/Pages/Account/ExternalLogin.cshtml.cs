@@ -113,9 +113,14 @@ namespace asp_net_core_belarus.Areas.Identity.Pages.Account
         {
             returnUrl = returnUrl ?? Url.Content("~/");
 
-            ExternalLoginInfo info = new ExternalLoginInfo(User,"Microsoft",
-                         User.Claims.Where(x => x.Type == "http://schemas.microsoft.com/identity/claims/objectidentifier").FirstOrDefault().Value.ToString(),
-                            "Microsoft");
+            var authenticateResult = await HttpContext.AuthenticateAsync(AzureADDefaults.AuthenticationScheme);
+            if (!authenticateResult.Succeeded)
+            {
+                return LocalRedirect(returnUrl);
+            }
+            ExternalLoginInfo info = new ExternalLoginInfo(User, "Microsoft",
+                authenticateResult.Principal.Claims.Where(x => x.Type == "http://schemas.microsoft.com/identity/claims/objectidentifier").FirstOrDefault().Value.ToString(),
+                "Microsoft");
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };

@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using asp_net_core_belarus.Areas.Identity.Data;
+using asp.net_core_belarus.Data;
 
 namespace aspnetcorebelarus.Migrations
 {
-    [DbContext(typeof(UsersContext))]
+    [DbContext(typeof(NorthwindDB))]
     [Migration("20191208102845_CreateIdentitySchema")]
     partial class CreateIdentitySchema
     {
