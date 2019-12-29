@@ -90,6 +90,8 @@ namespace aspnetcorebelarus.Migrations
                 column: "SupplierID");
         }
 
+
+
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(

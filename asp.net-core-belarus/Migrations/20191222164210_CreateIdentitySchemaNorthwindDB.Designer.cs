@@ -37,6 +37,11 @@ namespace aspnetcorebelarus.Migrations
                     b.HasKey("CategoryID");
 
                     b.ToTable("Categories");
+
+                    b.HasData(
+                        new {CategoryID = 1, CategoryName = "Beverages", Description = "Soft drinks, coffees, teas, beers, and ales"},
+                        new {CategoryID = 2, CategoryName = "Condiments", Description = "Sweet and savory sauces, relishes, spreads, and seasonings"},
+                        new {CategoryID = 3, CategoryName = "Confections",  Description = "Desserts, candies, and sweet breads"});
                 });
 
             modelBuilder.Entity("asp.net_core_belarus.Data.Product", b =>

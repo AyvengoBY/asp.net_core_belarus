@@ -26,6 +26,8 @@ namespace asp.net_core_belarus
                     // ...
                     logging.AddConfiguration(config);
                 })
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
                 .UseStartup<Startup>();
                 
     }

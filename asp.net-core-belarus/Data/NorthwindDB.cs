@@ -13,7 +13,7 @@ namespace asp.net_core_belarus.Data
     {
         public NorthwindDB(DbContextOptions<NorthwindDB> options) : base (options)
         {
-            Database.EnsureCreated();
+            // Database.EnsureCreated();
         }
 
         public DbSet<Category> Categories { get; set; }
