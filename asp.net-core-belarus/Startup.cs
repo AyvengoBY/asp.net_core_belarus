@@ -25,6 +25,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -92,6 +93,7 @@ namespace asp.net_core_belarus
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
             });
+
             services.Configure<IdentityOptions>(options =>
             {
                 options.Password.RequireDigit = true;

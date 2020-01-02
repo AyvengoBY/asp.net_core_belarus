@@ -9,6 +9,7 @@
     <UserSecretsId>be0e1cb7-eb72-4f2d-ab77-927345def39a</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.435" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureAD.UI" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
